@@ -13,6 +13,9 @@ NextJS combines ReactJS and API routes into one service.
 MongoDB is being used as the database.
 
 ## Setup Instructions
+
+If you wish to see an already deployed version, you may do as at: https://shopifybackendchallenge.vercel.app/
+
 1. Download NodeJS from https://nodejs.org/en/download/
 2. Clone this repository.
 3. Run `npm i` to install all depdendencies
