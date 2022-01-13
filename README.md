@@ -21,3 +21,7 @@ If you wish to see an already deployed version, you may do as at: https://shopif
 3. Run `npm i` to install all depdendencies
 4. Run `npm run dev` to run the program.
 5. Open `localhost:3000` in your browser and you will see the program.
+
+# Additional Notes
+- The code for the REST APIs is in the /pages/api folder
+- The code for generating the CSV file is in index.js on line 112
