@@ -25,7 +25,6 @@ export default function Home() {
 
         fetch('/api/GetProducts').then(res => res.json()).
             then(data => {
-                console.log(data);
 
                 let productList = [];
                 let tempProductCSV = productDataForCSV;
@@ -85,7 +84,6 @@ export default function Home() {
         
         const r = await fetch("/api/EditProduct?id=" + _id + "&name=" + name + "&price=" + price);
         const res = await r.json();
-        console.log(res);
     }
 
     // Delete product from database. Queries id from the attribute.
@@ -93,7 +91,6 @@ export default function Home() {
         const _id = e.target.getAttribute('_id');
         const r = await fetch("/api/DeleteProduct?id=" + _id);
         const res = await r.json();
-        console.log(res);
         
         location.reload();
     }
@@ -109,13 +106,13 @@ export default function Home() {
     const newProduct = async () => {
         const r = await fetch("/api/NewProduct?name=" + newName + "&price=" + newPrice);
         const res = await r.json();
-        console.log(res);
         location.reload();
     }
 
     const exportCSV = () => {
-        console.log(productDataForCSV);
+
         let csvContent = "data:text/csv;charset=utf-8,"; // CSV header
+
         productDataForCSV.forEach(rowArray => { // Loop through each product
             let row = rowArray.join(",");
             csvContent += row + "\r\n";
